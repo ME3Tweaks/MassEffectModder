@@ -52,7 +52,11 @@ TextureMovie::TextureMovie(Package &package, int exportId, const ByteBuffer &dat
         dataOffset = textureData->Position();
         quint32 tag = textureData->ReadUInt32();
         if (tag != BIK1_TAG && tag != BIK2_TAG && tag != BIK2_202205_TAG)
+<<<<<<< HEAD
             CRASH_MSG(QString("Unsuppported version of bink movie for texture: %i").toStdString().c_str());
+=======
+            CRASH_MSG("Unsuppported version of bink movie for texture.");
+>>>>>>> 100dec1918ba877852744b5209edc4e4c6dec125
     }
     else if (storageType != StorageTypes::extUnc && storageType == StorageTypes::extUnc2)
     {
